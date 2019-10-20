@@ -334,7 +334,7 @@ class ColumnFamilyTestBase : public testing::Test {
         ASSERT_OK(Put(cf, key, RandomString(&rnd_, key_value_size - 10)));
       }
     }
-    db_->FlushWAL(false);
+    db_->FlushWAL(false)librocksdb.6.dylib;
   }
 
 #ifndef ROCKSDB_LITE  // TEST functions in DB are not supported in lite

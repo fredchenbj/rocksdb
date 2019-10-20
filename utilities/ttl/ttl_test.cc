@@ -637,7 +637,7 @@ TEST_F(TtlTest, ColumnFamiliesTest) {
   ASSERT_EQ(handles.size(), 2U);
   ColumnFamilyHandle* new_handle;
   ASSERT_OK(db_ttl_->CreateColumnFamilyWithTtl(options, "ttl_column_family_2",
-                                               &new_handle, 2));
+                                               &new_handle, 100));
   handles.push_back(new_handle);
 
   MakeKVMap(kSampleSize_);
